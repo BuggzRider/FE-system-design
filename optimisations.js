@@ -29,14 +29,14 @@
     -) Loaders allow you to preprocess files as they are imported. We can transform files, such as converting TypeScript 
        to JavaScript or compiling Sass to CSS, enabling support for a wide variety of file types.
   -) Plugins
-    -) extend Webpack's functionality. They can perform a range of tasks, like optimizing the output, managing environment variables,
+    -) Extend Webpack's functionality. They can perform a range of tasks, like optimizing the output, managing environment variables,
        or handling code splitting. Notable plugins include HtmlWebpackPlugin and MiniCssExtractPlugin.
   -) Code Splitting
     -) This helps in writing code is small chunks which can be loaded on demand. This improves load times by only sending
        the necessary code to the browser.
   -) Development server
     -) Webpack provides a dev feature called Hot module replacement (HMR), which helps developers to make and reflect changes without 
-       braowser refresh.
+       browser refresh.
 */
 
 /*

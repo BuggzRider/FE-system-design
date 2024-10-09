@@ -45,7 +45,11 @@ class FetchWrapper {
         const queryKey = `${key}-${JSON.stringify(queryParams)}`
         const { clearAfter = 30, freshFetch = false, responseIntime } = cacheOptions
         if (this.cacheManager.cache[queryKey] && !freshFetch) {
-            return { data: this.cacheManager.cache[queryKey], clearCache: this.cacheManager.clearCache }
+            return {
+                data: this.cacheManager.cache[queryKey], clearCache: () => {
+                    this.cacheManager.clearCache(queryKey)
+                }
+            }
         }
         return dummyfetch("url", responseIntime)
             .then(data => {
